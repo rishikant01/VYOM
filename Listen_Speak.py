@@ -1,5 +1,6 @@
 import speech_recognition as sr
 import pyttsx3
+#VYOM speaking HINDI
 def Speak_hi(Text):
     engine = pyttsx3.init("sapi5")
     voices = engine.getProperty('voices')
@@ -11,12 +12,14 @@ def Speak_hi(Text):
     engine.setProperty('rate', 170)
     engine.say(Text)
     engine.runAndWait()
+#VYOM speaking English
 def Speak_en(Text):
     engine=pyttsx3.init('sapi5')
     voices=engine.getProperty('voices')
     engine.setProperty('voices',voices[0].id)
     engine.say(Text)
     engine.runAndWait()
+#VYOM listening and recognizing english
 def Listen():
 
     r=sr.Recognizer()
@@ -37,7 +40,7 @@ def Listen():
     return query.lower()
 import sys
 import speech_recognition as sr
-
+#VYOM listening and recogninzing HINDI
 def Listen_hi():
     # Set the default encoding to utf-8
     sys.stdout.reconfigure(encoding='utf-8')
