@@ -1,6 +1,6 @@
 import cv2
 recognizer = cv2.face.LBPHFaceRecognizer_create()
-recognizer.read('Face_detect/trainer/trainer.yml')
+recognizer.read(r'C:\Users\HP\Desktop\VYOM\Face_detect\Trainer.yml')
 cascadePath="haarcascade_frontalface_default.xml"
 faceCascade=cv2.CascadeClassifier(cascadePath)
 
