@@ -22,7 +22,21 @@ def password():
     if expected_password==entered_password:
         print("Welcome Rishi Sir!")
         Speak_en("Welcome Rishi Sir!")
+        return True
     else:
         print("Wrong Password. Access denied")
         Speak_en("Wrong Password. Access denied")
+        return False
 
+def unlock_sys():
+    print("Select the method to unlock the bot :\n1. Face UNLOCK\n2. Password UNLOCK")
+    Speak_en("Select the method to unlock the bot")
+    ip=input("Enter 1 for Face & 2 for Password : ")
+    if ip=='1':
+        return face()
+
+    elif ip=='2':
+        return password()
+    else:
+        print("Invalid Input!")
+        return False
